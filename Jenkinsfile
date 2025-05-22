@@ -1,11 +1,12 @@
 @Library('jenkins-shared-libraries') _
-
 pipeline {
     agent any
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                script {
+                    checkout()
+                }
             }
         }
         stage('Build') {
@@ -19,6 +20,13 @@ pipeline {
             steps {
                 script {
                     test()
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    deploy()
                 }
             }
         }
