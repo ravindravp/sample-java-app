@@ -5,22 +5,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    checkout scm
-                }
+                checkout scm
             }
         }
         stage('Build') {
             steps {
                 script {
-                    build() // Calls the shared library function
+                    build()
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    test() // Calls the shared library function
+                    test()
                 }
             }
         }
