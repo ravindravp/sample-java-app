@@ -13,14 +13,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    build() // Calls the build function from the shared library
+                    build() // Calls the shared library function
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    test() // Calls the test function from the shared library
+                    test() // Calls the shared library function
                 }
             }
         }
