@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    checkout()
+                    checkout() // Calls the shared library function
                 }
             }
         }
